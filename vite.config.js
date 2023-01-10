@@ -17,4 +17,12 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: `assets/main.js`,
+        assetFileNames: `assets/style.css`,
+      },
+    },
+  },
 });

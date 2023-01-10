@@ -21,7 +21,6 @@ body {
   font-style: normal;
   font-weight: 400;
   overflow-x: hidden;
-  font-family: $ff-inter;
 
   letter-spacing: 0.03em;
 
@@ -133,7 +132,15 @@ input[type='number'] {
 // ios button \ inputs reset
 select,
 textarea,
-input:matches([type='email'], [type='number'], [type='password'], [type='search'], [type='tel'], [type='text'], [type='url']) {
+input:matches(
+    [type='email'],
+    [type='number'],
+    [type='password'],
+    [type='search'],
+    [type='tel'],
+    [type='text'],
+    [type='url']
+  ) {
   appearance: none;
 }
 
