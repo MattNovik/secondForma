@@ -4,7 +4,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 
-const CustomForm = ({ classname, id, hidden }) => {
+const CustomForm = ({ classname, id, hidden, data }) => {
   const formik = useFormik({
     initialValues: {
       theme: hidden ? 'не определена' : '',
@@ -20,7 +20,7 @@ const CustomForm = ({ classname, id, hidden }) => {
       let formData = new FormData();
       formData.append('theme', values.theme);
       formData.append('email', values.email);
-      formData.append('partnerId', document.querySelector('.partnerId').value);
+      formData.append('partnerId', data.partnerId);
       axios
         .post(
           'https://dev.studservis.ru/wp-content/themes/studservice/ajax/createOrder.php',

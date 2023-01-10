@@ -4,7 +4,7 @@ import MakeOrder from './components/MakeOrder';
 function App() {
   return (
     <div className="App">
-      <MakeOrder />
+      <MakeOrder jsonData={document.querySelector('#root').dataset.info} />
     </div>
   );
 }

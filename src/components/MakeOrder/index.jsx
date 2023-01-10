@@ -4,7 +4,8 @@ import CustomForm from '../CustomForm';
 import orderImage from '../../assets/images/order.png';
 /* import { StaticImage } from 'gatsby-plugin-image'; */
 
-const MakeOrder = () => {
+const MakeOrder = ({ jsonData }) => {
+  const data = JSON.parse(jsonData);
   return (
     <section className="make-order">
       <div className="make-order__container">
@@ -27,7 +28,7 @@ const MakeOrder = () => {
             <h2 className="make-order__title">
               Дарим скидку <span>до 15%</span> на первый заказ при регистрации:
             </h2>
-            <CustomForm classname={'second-form'} hidden={true} />
+            <CustomForm classname={'second-form'} hidden={true} data={data} />
           </div>
         </div>
       </div>
