@@ -1,5 +1,4 @@
 import './index.scss';
-import * as React from 'react';
 import CustomForm from '../CustomForm';
 import orderImage from '../../assets/images/order.png';
 /* import { StaticImage } from 'gatsby-plugin-image'; */
