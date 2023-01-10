@@ -1,7 +1,5 @@
 import './index.scss';
 import CustomForm from '../CustomForm';
-import orderImage from '../../assets/images/order.png';
-/* import { StaticImage } from 'gatsby-plugin-image'; */
 
 const MakeOrder = ({ jsonData }) => {
   const data = JSON.parse(jsonData);
