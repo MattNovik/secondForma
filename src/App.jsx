@@ -2,7 +2,7 @@ import './scss/index.scss';
 import MakeOrder from './components/MakeOrder';
 
 function App() {
-  import('container-query-polyfill');
+  /* import('container-query-polyfill'); */
 
   return (
     <div className="App">
