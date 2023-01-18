@@ -8,14 +8,14 @@
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
   margin: 0 auto;
-  container-type: inline-size;
+  container: form / inline-size;
 
   @include vp--1023 {
     width: 100%;
     padding: 44px 15px 26px;
   }
 
-  @container (max-width: 1023px) {
+  @container form (max-width: 1023px) {
     .custom-form:not(.container-query-polyfill) {
       width: 100%;
       padding: 44px 15px 26px;
@@ -28,7 +28,7 @@
     box-shadow: none;
   }
 
-  @container (max-width: 767px) {
+  @container form (max-width: 767px) {
     .custom-form:not(.container-query-polyfill) {
       padding: 0;
       background-color: $color-transparent;
@@ -65,7 +65,7 @@
     }
   }
 
-  @container (max-width: 600px) {
+  @container form (max-width: 600px) {
     .custom-form__inputs-wrapper:not(.container-query-polyfill) {
       width: 100%;
       row-gap: 16px;
@@ -138,7 +138,7 @@
     }
   }
 
-  @container (max-width: 1023px) {
+  @container form (max-width: 1023px) {
     .custom-form__button:not(.container-query-polyfill) {
       width: 100%;
       min-width: 200px;
@@ -214,7 +214,7 @@
     }
   }
 
-  @container (max-width: 767px) {
+  @container form (max-width: 767px) {
     .custom-form__input-agreeament + label:not(.container-query-polyfill) {
       color: $color-default-white;
     }
