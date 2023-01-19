@@ -1,9 +1,8 @@
 import './scss/index.scss';
 import MakeOrder from './components/MakeOrder';
+/* import('container-query-polyfill'); */
 
 function App() {
-  import('container-query-polyfill');
-
   return (
     <div className="App">
       <MakeOrder jsonData={document.querySelector('#root').dataset.info} />
