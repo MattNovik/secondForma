@@ -4,7 +4,7 @@ import CustomForm from '../CustomForm';
 const MakeOrder = ({ jsonData }) => {
   const data = JSON.parse(jsonData);
   return (
-    <section className="make-order">
+    <section className="make-order" id="content">
       <div className="make-order__container">
         <div className="make-order__form-wrapper">
           <img
