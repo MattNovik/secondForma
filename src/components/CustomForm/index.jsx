@@ -61,7 +61,7 @@ const CustomForm = ({ classname, id, hidden, data }) => {
     >
       <div className="custom-form__inputs-wrapper">
         <input
-          type={classname === 'second-form' ? 'hidden' : 'text'}
+          type={classname.includes('second-form') ? 'hidden' : 'text'}
           name="theme"
           className={
             formik.errors.theme

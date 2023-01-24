@@ -4,7 +4,14 @@ import CustomForm from '../CustomForm';
 const MakeOrder = ({ jsonData }) => {
   const data = JSON.parse(jsonData);
   return (
-    <section className="make-order" id="content">
+    <section
+      className={
+        data && data.widthClass
+          ? 'make-order make-order--' + data.widthClass
+          : 'make-order'
+      }
+      id="content"
+    >
       <div className="make-order__container">
         <div className="make-order__form-wrapper">
           <img
@@ -27,7 +34,15 @@ const MakeOrder = ({ jsonData }) => {
             <h2 className="make-order__title">
               Дарим скидку <span>до 15%</span> на первый заказ при регистрации:
             </h2>
-            <CustomForm classname={'second-form'} hidden={true} data={data} />
+            <CustomForm
+              classname={
+                data && data.widthClass
+                  ? 'second-form second-form--' + data.widthClass
+                  : 'second-form'
+              }
+              hidden={true}
+              data={data}
+            />
           </div>
         </div>
       </div>

@@ -8,19 +8,11 @@
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
   margin: 0 auto;
-  /* container: form / inline-size; */
 
   @include vp--1023 {
     width: 100%;
     padding: 44px 15px 26px;
   }
-
-  /* @container form (max-width: 1023px) {
-    .custom-form:not(.container-query-polyfill) {
-      width: 100%;
-      padding: 44px 15px 26px;
-    }
-  } */
 
   @include vp--767 {
     padding: 0;
@@ -28,14 +20,6 @@
     box-shadow: none;
   }
 
-  /* @container form (max-width: 767px) {
-    .custom-form:not(.container-query-polyfill) {
-      padding: 0;
-      background-color: $color-transparent;
-      box-shadow: none;
-    }
-  }
- */
   &.second-form {
     padding: 0;
     background-color: $color-transparent;
@@ -52,6 +36,72 @@
         }
       }
     }
+
+    &--width-280 {
+      padding: 0;
+      background-color: $color-transparent;
+      box-shadow: none;
+
+      & .custom-form {
+        &__inputs-wrapper {
+          width: 100%;
+          row-gap: 16px;
+          flex-direction: column;
+        }
+
+        &__input {
+          width: 100%;
+          min-width: 200px;
+        }
+
+        &__button {
+          width: 100%;
+          min-width: 200px;
+        }
+      }
+    }
+
+    &--width-600 {
+      padding: 0;
+      background-color: $color-transparent;
+      box-shadow: none;
+
+      & .custom-form {
+        &__inputs-wrapper {
+          width: 100%;
+          row-gap: 16px;
+          flex-direction: column;
+        }
+
+        &__input {
+          width: 100%;
+          min-width: 200px;
+        }
+
+        &__button {
+          width: 100%;
+          min-width: 200px;
+        }
+      }
+    }
+
+    &--width-1024 {
+      padding: 0;
+      background-color: $color-transparent;
+      box-shadow: none;
+
+      & .custom-form {
+        &__input {
+          width: 100%;
+          min-width: 200px;
+        }
+
+        &__button {
+          width: 100%;
+          min-width: 200px;
+        }
+      }
+    }
   }
 
   &__inputs-wrapper {
@@ -64,14 +114,6 @@
       flex-direction: column;
     }
   }
-
-  /* @container form (max-width: 600px) {
-    .custom-form__inputs-wrapper:not(.container-query-polyfill) {
-      width: 100%;
-      row-gap: 16px;
-      flex-direction: column;
-    }
-  } */
 
   &__input {
     min-width: 250px;
@@ -137,13 +179,6 @@
       background-color: #e26c12;
     }
   }
-
-  /* @container form (max-width: 1023px) {
-    .custom-form__button:not(.container-query-polyfill) {
-      width: 100%;
-      min-width: 200px;
-    }
-  } */
 
   &__input-agreeament {
     &.error {
@@ -213,10 +248,4 @@
       }
     }
   }
-
-  /* @container form (max-width: 767px) {
-    .custom-form__input-agreeament + label:not(.container-query-polyfill) {
-      color: $color-default-white;
-    }
-  } */
 }
